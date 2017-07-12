@@ -1,0 +1,32 @@
+<%= form_with(model: todoroute, local: true) do |form| %>
+  <% if todoroute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todoroute.errors.count, "error") %> prohibited this todoroute from being saved:</h2>
+
+      <ul>
+      <% todoroute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :todoroute_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :todoroute_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rou_id %>
+    <%= form.number_field :rou_id, id: :todoroute_rou_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

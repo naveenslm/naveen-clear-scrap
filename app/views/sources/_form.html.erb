@@ -1,0 +1,62 @@
+<%= form_with(model: source, local: true) do |form| %>
+  <% if source.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(source.errors.count, "error") %> prohibited this source from being saved:</h2>
+
+      <ul>
+      <% source.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :source_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :source_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :source_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.text_field :distance, id: :source_distance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time, id: :source_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :source_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_price %>
+    <%= form.number_field :min_price, id: :source_min_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_price %>
+    <%= form.number_field :max_price, id: :source_max_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :route_id %>
+    <%= form.number_field :route_id, id: :source_route_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

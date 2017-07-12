@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Distance</th>
+      <th>Time</th>
+      <th>Price</th>
+      <th>Min price</th>
+      <th>Max price</th>
+      <th>Route</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sources.each do |source| %>
+      <tr>
+        <td><%= source.name %></td>
+        <td><%= source.from %></td>
+        <td><%= source.to %></td>
+        <td><%= source.distance %></td>
+        <td><%= source.time %></td>
+        <td><%= source.price %></td>
+        <td><%= source.min_price %></td>
+        <td><%= source.max_price %></td>
+        <td><%= source.route_id %></td>
+        <td><%= link_to 'Show', source %></td>
+        <td><%= link_to 'Edit', edit_source_path(source) %></td>
+        <td><%= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Source', new_source_path %>

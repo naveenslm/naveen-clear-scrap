@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Todoroutes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Rou</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todoroutes.each do |todoroute| %>
+      <tr>
+        <td><%= todoroute.from %></td>
+        <td><%= todoroute.to %></td>
+        <td><%= todoroute.rou_id %></td>
+        <td><%= link_to 'Show', todoroute %></td>
+        <td><%= link_to 'Edit', edit_todoroute_path(todoroute) %></td>
+        <td><%= link_to 'Destroy', todoroute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todoroute', new_todoroute_path %>

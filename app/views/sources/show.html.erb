@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @source.name %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @source.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @source.to %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @source.distance %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @source.time %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @source.price %>
+</p>
+
+<p>
+  <strong>Min price:</strong>
+  <%= @source.min_price %>
+</p>
+
+<p>
+  <strong>Max price:</strong>
+  <%= @source.max_price %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @source.route_id %>
+</p>
+
+<%= link_to 'Edit', edit_source_path(@source) %> |
+<%= link_to 'Back', sources_path %>

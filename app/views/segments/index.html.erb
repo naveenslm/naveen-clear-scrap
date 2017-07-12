@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Segments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Distance</th>
+      <th>Time</th>
+      <th>Veh type</th>
+      <th>Price</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Source</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @segments.each do |segment| %>
+      <tr>
+        <td><%= segment.name %></td>
+        <td><%= segment.from %></td>
+        <td><%= segment.to %></td>
+        <td><%= segment.distance %></td>
+        <td><%= segment.time %></td>
+        <td><%= segment.veh_type %></td>
+        <td><%= segment.price %></td>
+        <td><%= segment.min %></td>
+        <td><%= segment.max %></td>
+        <td><%= segment.source_id %></td>
+        <td><%= link_to 'Show', segment %></td>
+        <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
+        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Segment', new_segment_path %>

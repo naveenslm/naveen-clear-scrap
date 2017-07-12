@@ -1,0 +1,17 @@
+en:
+  admin:
+    actions:
+     
+      routesupload:
+        title: "Upload"
+        menu: "Upload"
+        breadcrumb: "Upload"
+        link: "Upload"
+
+
+      sync:
+        title: "Sync"
+        menu: "Sync"
+        breadcrumb: "Sync"
+        link: "Sync"
+        

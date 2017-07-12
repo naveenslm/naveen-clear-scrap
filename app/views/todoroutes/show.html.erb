@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From:</strong>
+  <%= @todoroute.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @todoroute.to %>
+</p>
+
+<p>
+  <strong>Rou:</strong>
+  <%= @todoroute.rou_id %>
+</p>
+
+<%= link_to 'Edit', edit_todoroute_path(@todoroute) %> |
+<%= link_to 'Back', todoroutes_path %>

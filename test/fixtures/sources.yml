@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  from: MyString
+  to: MyString
+  distance: MyString
+  time: MyString
+  price: 1
+  min_price: 1
+  max_price: 1
+  route_id: 1
+
+two:
+  name: MyString
+  from: MyString
+  to: MyString
+  distance: MyString
+  time: MyString
+  price: 1
+  min_price: 1
+  max_price: 1
+  route_id: 1

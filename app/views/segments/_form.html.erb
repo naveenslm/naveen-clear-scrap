@@ -1,0 +1,67 @@
+<%= form_with(model: segment, local: true) do |form| %>
+  <% if segment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(segment.errors.count, "error") %> prohibited this segment from being saved:</h2>
+
+      <ul>
+      <% segment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :segment_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :segment_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :segment_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.text_field :distance, id: :segment_distance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time, id: :segment_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veh_type %>
+    <%= form.text_field :veh_type, id: :segment_veh_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :segment_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min %>
+    <%= form.number_field :min, id: :segment_min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max %>
+    <%= form.number_field :max, id: :segment_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source_id %>
+    <%= form.number_field :source_id, id: :segment_source_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

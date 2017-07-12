@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  from: MyString
+  to: MyString
+  distance: MyString
+  time: MyString
+  veh_type: MyString
+  price: 1
+  min: 1
+  max: 1
+  source_id: 1
+
+two:
+  name: MyString
+  from: MyString
+  to: MyString
+  distance: MyString
+  time: MyString
+  veh_type: MyString
+  price: 1
+  min: 1
+  max: 1
+  source_id: 1
